@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-POSTGIS_VERSION = 3.1.1
+POSTGIS_VERSION = 3.2.0
 POSTGIS_SITE = https://download.osgeo.org/postgis/source
 # parallel build issues
 POSTGIS_MAKE = $(MAKE1)
@@ -19,8 +19,7 @@ POSTGIS_DEPENDENCIES = postgresql libgeos proj libxml2
 POSTGIS_CONF_OPTS += \
 	--with-pgconfig=$(STAGING_DIR)/usr/bin/pg_config \
 	--with-geosconfig=$(STAGING_DIR)/usr/bin/geos-config \
-	--with-xml2config=$(STAGING_DIR)/usr/bin/xml2-config \
-	--without-protobuf
+	--with-xml2config=$(STAGING_DIR)/usr/bin/xml2-config
 
 ifeq ($(BR2_PACKAGE_LIBGDAL),y)
 POSTGIS_DEPENDENCIES += libgdal
@@ -38,6 +37,13 @@ endif
 
 ifeq ($(BR2_PACKAGE_PCRE),y)
 POSTGIS_DEPENDENCIES += pcre
+endif
+
+ifeq ($(BR2_PACKAGE_PROTOBUF_C),y)
+POSTGIS_DEPENDENCIES += protobuf-c
+POSTGIS_CONF_OPTS += --with-protobuf
+else
+POSTGIS_CONF_OPTS += --without-protobuf
 endif
 
 $(eval $(autotools-package))

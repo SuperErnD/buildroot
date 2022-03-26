@@ -1,6 +1,6 @@
-# From https://lists.x.org/archives/xorg-announce/2021-February/003073.html
-sha256  4c732b14fc7c7db64306374d9e8386d6172edbb93f587614df1938b9d9b9d737  xorgproto-2021.3.tar.bz2
-sha512  3965e8f7f9fbfb2ad8c315865e112e2743915e6b9669fb1ee9bdd376fe4dce0145d547c679a321763b3eaa54832c7a92ff627f36505e914d2a4c48c2246a800e  xorgproto-2021.3.tar.bz2
+# From https://lists.x.org/archives/xorg-announce/2021-September/date.html
+sha256  aa2f663b8dbd632960b24f7477aa07d901210057f6ab1a1db5158732569ca015  xorgproto-2021.5.tar.bz2
+sha512  0f5c4ee4fd56cd46f4d5850bcf3e04c92d2e98de54d0113987cb49fc83cf1f4d0e50e976333179c72fe2178cfa15ec6c1bfc4e76fc3bc2a4be80616ce079da87  xorgproto-2021.5.tar.bz2
 
 # Locally computed
 sha256  aacd931f191b610902aee1e526090c2858aabc07969441fa2537ffd3e7049555  COPYING-applewmproto
